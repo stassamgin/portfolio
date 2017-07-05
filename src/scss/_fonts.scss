@@ -1,0 +1,9 @@
+@include includeFont("20db");
+
+@include includeFont("ptsans", normal, normal, ptsans_regular);
+
+@include includeFont("ptsans", bold, normal, ptsans_bold);
+
+@include includeFont("ptsans", normal, italic, ptsans_italic);
+
+@include includeFont("ptsans", bold, italic, ptsans_bolditalic);

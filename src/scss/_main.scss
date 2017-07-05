@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body  {    
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : $screen-xs) {
+        margin: 0 auto;
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : $screen-sm) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : $screen-md) {
+        
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : $screen-lg) {
+        width: 970px;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : $screen-xl) {
+        width: 1150px;
+    }
+}
+
+.asideTitle {
+font-family: $fontFamily2;
+font-size: $fontSize--h1;
+text-transform: uppercase;
+width: 150px;
+overflow:visible;
+align-self: flex-end;
+transform: rotate(-90deg);
+
+    .asideTitle__rotate {
+        display: block;
+        width: 500%;
+        text-align: center;
+        transform: scale(1.4);
+        color: $grey;
+        letter-spacing: .3rem;
+    }
+}
+
+
+
+// ======== SUPPORT CLASSES =======
+
+%blockStartFlexRow {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    // overflow: hidden;
+}

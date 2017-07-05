@@ -1,0 +1,201 @@
+.skills {
+@extend %blockStartFlexRow;
+z-index: 26;
+}
+
+.skills__skillBlock {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // overflow: hidden;
+    width: 100%;
+}
+
+.skillBlockMain__title, 
+.skillBlockSecond__title,
+.skillBlockLanguage__title {
+    align-self: flex-start;
+    margin-bottom: 3rem;
+
+    padding-left: 7rem;
+
+    display: block;
+    width: 100%;
+    position: relative;
+
+    line-height: 4;
+    
+    font-family: $fontFamily1;
+    font-size: $fontSize--h2;
+    font-weight: normal;
+    color: $textBlack;
+    overflow: hidden;
+
+    &::before {
+		position: absolute;
+		content: '';
+		height: 102%;
+		width: 60px;
+		top: 0;
+		left: -3rem;
+        background-color: #fff;
+
+		box-shadow: 2px 7px 0 $blue,
+		4px -2px 0 #fff,
+		6px -7px 0 $orange;
+
+		transform: skewX(-25deg);
+	}
+
+        &::after {
+		position: absolute;
+		content: '';
+		height: 50%;
+		width: 7px;
+		top: 23%;
+		left: 4rem;
+        background-color: $blue;
+
+		transform: skewX(-25deg);
+	}
+}
+
+.skillBlockMain__list {    
+    align-self: flex-end;
+    width: 90%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: right;
+
+    margin-bottom: 3rem;    
+}
+
+.skillBlockMain__item {
+    padding: 1.4rem;
+    margin-bottom: 10px;
+    position: relative;    
+    overflow: hidden;
+    font-family: $fontFamily1;
+    font-size: $fontSize;
+    font-weight: bold;
+    color: $bgColor;
+    text-shadow: $textShadow;
+    line-height: 1.4rem;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;        
+        height: 100%;
+        background-image: linear-gradient(515deg, $blue 0%, lighten($blue,2) 30%, darken($blue,10) 70%);
+        z-index: -1;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+    }
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;               
+        height: 100%;
+        z-index: 1;
+        padding-top: 1.2rem;
+        font-size: 1.75rem;
+
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+
+    @include skillBar(80, 1); //HTML
+    @include skillBar(90, 2); //CSS
+    @include skillBar(40, 3); //JavaScript
+    @include skillBar(55, 4); //JQuery
+    @include skillBar(65, 5); //Adobe Photoshop
+    @include skillBar(35, 6); //Adobe Illustrator
+    @include skillBar(40, 7); //3DS Max
+    @include skillBar(20, 8); //PHP
+}
+
+.skillBlockSecond__list {
+    width: 100%;
+    padding-left: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 7rem; 
+}
+
+.skillBlockSecond__item {
+    display: inline-block;
+    border: 1px solid $grey;
+    padding: .8rem 1.6rem;
+    margin: 1rem 1.4rem;
+    font-family: $fontFamily1;
+    font-size: $fontSize--h2;
+    color: $textBlack;
+    background-color: $lightGrey;
+    box-shadow: $boxShadow;
+}
+
+.skillBlockLanguage__list {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.skillBlockLanguage__item {
+    position: relative;
+    margin-bottom: 8rem;
+
+    &--ru {
+        @include roundBar(160px, 90, $grey, $blue, $bgColor, 0);
+    }
+
+    &--ukr {
+        @include roundBar(160px, 80, $grey, $blue, $bgColor, 0);
+    }
+
+    &--en {
+        @include roundBar(160px, 35, $grey, $blue, $bgColor, 0);
+    }
+}
+
+.skillBlockLanguage__text {    
+    position: absolute;
+    display: block;
+    width: 120%;
+    left: -10%;
+    top: 17.5rem;
+    text-align: center;
+
+    font-size: $fontSize;
+    text-transform: uppercase;
+    color: $textBlack;
+    letter-spacing: 1.75px;
+}
+
+.skillBlockLanguage__descr {
+    display: block;
+    margin-top: .75rem;
+
+    text-transform: none;
+    font-size: $fontSize--small;
+    color: $textGrey;
+    letter-spacing: normal;
+
+}
