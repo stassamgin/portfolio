@@ -1,0 +1,23 @@
+.education  {
+    @extend %blockStartFlexRow;
+}
+
+.education__block  {
+    width: 100%;
+    
+}
+
+.education__title  {
+ @extend .skillBlockMain__title;
+}
+
+.education__list  {
+    outline: 1px solid red;
+    width: 85%;
+    margin-left: auto;
+}
+
+.education__item  {
+    outline: 1px solid green;
+    width: 100%;
+}

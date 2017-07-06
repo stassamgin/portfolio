@@ -1,0 +1,99 @@
+.works {
+@extend %blockStartFlexRow;
+z-index: 26;
+position: relative;
+padding-top: 3rem;
+
+@extend %bgBlockColor;
+}
+
+.works__block {
+    width: 100%;
+}
+
+.works__title {
+  align-self: flex-start;
+    margin-bottom: 2rem;
+
+    padding-left: 7rem;
+
+    display: block;
+    width: 100%;
+    position: relative;
+
+    line-height: 4;
+    
+    font-family: $fontFamily1;
+    font-size: $fontSize--h2;
+    font-weight: normal;
+    color: $textBlack;
+    overflow: hidden;
+
+    &::before {
+		position: absolute;
+		content: '';
+		height: 102%;
+		width: 60px;
+		top: 0;
+		left: -3rem;
+
+		box-shadow: 2px 7px 0 $blue,
+		4px -2px 0 $lightGrey,
+		6px -7px 0 $orange;
+
+		transform: skewX(-25deg);
+	}
+
+        &::after {
+		position: absolute;
+		content: '';
+		height: 50%;
+		width: 7px;
+		top: 23%;
+		left: 4rem;
+        background-color: $blue;
+
+		transform: skewX(-25deg);
+	}
+}
+
+.works__list {
+    width: 100%;
+    margin-bottom: 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.works__item {
+    width: 31%;
+    margin: 0 10px 30px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+    border-radius: 10px;
+    transition: all .5s;
+
+    &:hover {
+        transform: rotateY(90deg);
+        perspective: 30px 400px;
+        backface-visibility: hidden;
+    }
+}
+
+.works__img {
+object-fit: contain;
+width: 100%;
+}
+
+.works__descr {
+    background-color: $bgColor;
+    padding: 15px;
+    font-family: $fontFamily1;
+    font-size: $fontSize--small;
+    color: $textBlack;
+    text-align: justify;
+}
