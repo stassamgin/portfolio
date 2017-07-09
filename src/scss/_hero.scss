@@ -1,55 +1,14 @@
 .hero {    
     height: 130vh;
+    width: 100%;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    padding-top: $headerHeight;
 }
-
-.header {
-    width: 100%;
-    height: 100px;
-    z-index: 100;   
-}
-
-.header__nav {
-    background-color: green;
-        width: 100%;
-    text-align: right;
-}
-
-.header__navList {
-    list-style: none;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;     
-}
-
-.header__navItem {
-    list-style: none;
-    margin: 2rem 2.5rem;
-
-    a {
-        font-size: $fontSize;;
-        text-decoration: none;
-        color: #fff;
-    }
-}
-
-// .hero__diag {
-//     display: block;
-//     position: absolute;
-//     ///top: -400px;
-//     bottom: 30px;
-//     left: 0;
-//     width: 100%;
-//     height: 150%;
-//     background-image: linear-gradient(467deg, #EA785A 0%, #EE8768 30%, #EE9F7A 70%);
-//     // transform: skewY(-29deg);
-//     z-index: 10;
-// }
 
 .hero__diag {
     display: block;
@@ -57,7 +16,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%;    
     background-image: $blueGradient;
     overflow: hidden;
     z-index: 10;
@@ -134,4 +93,26 @@
     color: $blue;
     border-radius: .2em;
     box-shadow: $textShadow;
+    transition: all .5s;
+}
+
+
+@media only screen and (min-width : $screen-xs) {
+    
+}
+
+@media only screen and (min-width : $screen-sm) {
+
+}
+
+@media only screen and (min-width : $screen-md) {
+            
+}
+
+@media only screen and (min-width : $screen-lg) {
+    
+}
+
+@media only screen and (min-width : $screen-xl) {
+    
 }

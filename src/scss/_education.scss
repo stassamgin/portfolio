@@ -8,16 +8,114 @@
 }
 
 .education__title  {
- @extend .skillBlockMain__title;
+    @extend .skillBlockMain__title;
 }
 
 .education__list  {
-    outline: 1px solid red;
-    width: 85%;
+    width: calc(100% - 15rem);
     margin-left: auto;
+    position: relative;
+    padding-top: 6rem;
+
+    &::before {
+        content: '';
+        width: 2px;
+        height: calc(100% + 4rem);
+        position: absolute;
+        top: -2rem;
+        left: - $educMarkerMargin;
+        background: linear-gradient(0, transparent, $blue 8rem);
+        z-index: 10;
+    }
+}
+
+.education__icon {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: -2rem;
+    left: - $educMarkerMargin - 3rem;
+    z-index: 15;
+    background: $bgColor;
+    border: 2px solid $blue;
+    border-radius: 50%;
+
+    svg {
+        width: 70%;
+        height: 70%;
+        margin: .9rem 0 0 .9rem;
+
+        * {
+            fill: $textBlack;
+        }
+    }
+
 }
 
 .education__item  {
-    outline: 1px solid green;
     width: 100%;
+    position: relative;
+    margin-bottom: 6rem;
+    font-family: $fontFamily1;
+
+    &::before {
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        border: .6rem solid $bgColor;
+        position: absolute;
+        top: 0;
+        left: - $educMarkerMargin - .51rem - .6rem/2;
+        background-color: $orange;
+        z-index: 11;
+    }
+}
+
+.education__school {
+    font-size: $fontSize--h2;
+    font-weight: bold;
+    color: $textBlack;    
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.education__spec {
+    display: inline-block;
+    font-size: $fontSize--small;
+    font-weight: normal;
+    color: $textGrey;
+    text-transform: uppercase;
+    margin-left: 4rem;
+}
+
+.education__acadDegree {
+    display: inline-block;
+    font-size: $fontSize--small;
+    font-weight: normal;
+    color: $textGrey;
+    padding: 0 2rem;
+    text-transform: uppercase;    
+    margin-bottom: 2.5rem; 
+
+    &::before, &::after {
+        padding: 0 1em;
+        content: '/';
+    }
+}
+
+.education__year {
+    display: inline-block;
+    font-family: $fontFamily1;
+    font-size: $fontSize--small + 0.1;
+    color: $textGrey;   
+}
+
+.education__descr {
+    font-family: $fontFamily1;
+    font-size: $fontSize;
+    font-weight: normal;
+    color: $textBlack;
+    text-align: justify;
+    text-indent: 2rem;
 }

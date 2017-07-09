@@ -18,7 +18,6 @@ z-index: 26;
 .skillBlockLanguage__title {
     align-self: flex-start;
     margin-bottom: 3rem;
-
     padding-left: 7rem;
 
     display: block;
@@ -29,7 +28,7 @@ z-index: 26;
     
     font-family: $fontFamily1;
     font-size: $fontSize--h2;
-    font-weight: normal;
+    font-weight: bold;
     color: $textBlack;
     overflow: hidden;
 
@@ -171,7 +170,7 @@ z-index: 26;
     }
 
     &--en {
-        @include roundBar(160px, 35, $grey, $blue, $bgColor, 0);
+        @include roundBar(160px, 40, $grey, $blue, $bgColor, 0);
     }
 }
 

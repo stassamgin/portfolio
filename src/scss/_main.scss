@@ -12,6 +12,7 @@ body  {
     min-height: 100vh;
     width: 100%;
     min-width: 320px;
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -22,33 +23,27 @@ body  {
 .container {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-
-    
-    /* Custom, iPhone Retina */
+   
     @media only screen and (min-width : $screen-xs) {
-        margin: 0 auto;
+
     }
 
-    /* Extra Small Devices, Phones */
     @media only screen and (min-width : $screen-sm) {
 
     }
 
-    /* Small Devices, Tablets */
     @media only screen and (min-width : $screen-md) {
-        
+        width: 720px;        
     }
 
-    /* Medium Devices, Desktops */
     @media only screen and (min-width : $screen-lg) {
-        width: 970px;
+        width: 960px;
     }
 
-    /* Large Devices, Wide Screens */
     @media only screen and (min-width : $screen-xl) {
-        width: 1150px;
+        width: 1140px;
     }
 }
 
