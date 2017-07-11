@@ -12,7 +12,6 @@
     background-color: green;
         width: 100%;
     text-align: right;
-    opacity: .5;
 }
 
 .header__navList {
@@ -31,4 +30,94 @@
         text-decoration: none;
         color: #fff;
     }
+}
+
+.menuBtn {
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    display: block;
+    padding: .5rem 1.5rem .6rem;
+    background-color: $bgColor;
+    color: $blue;
+    border: none;
+    border-radius: 15px;
+    z-index: 101;
+     font-family: $fontFamily1;
+    font-size: $fontSize--small;
+    text-transform: uppercase;
+
+
+
+    &:focus, &:hover {
+        outline: none;
+    }
+}
+
+@media only screen and (min-width : $screen-xs) {
+    
+    .header {
+        height: 60px;
+    }
+
+    .header__nav {
+        text-align: left;
+    }
+
+    .header__navList {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $blueGradient;
+        margin: 0;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        z-index: 100;
+        padding-top: 4rem;
+    }
+
+    .header__navItem {
+        margin: 0;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(90deg, rgba(255,255,255,.85) 50%, transparent);
+
+
+        }
+
+        a {
+            display: block;
+            font-size: $fontSize+0.1;
+            text-shadow: $textShadow;
+            text-decoration: none;
+            color: #fff;
+            padding: 2rem 2.5rem;
+        }
+
+
+    }
+}
+
+@media only screen and (min-width : $screen-sm) {
+
+}
+
+@media only screen and (min-width : $screen-md) {
+            
+}
+
+@media only screen and (min-width : $screen-lg) {
+    
+}
+
+@media only screen and (min-width : $screen-xl) {
+    
 }

@@ -27,7 +27,7 @@ body  {
     padding: 0;
    
     @media only screen and (min-width : $screen-xs) {
-
+        padding: 0 2rem;
     }
 
     @media only screen and (min-width : $screen-sm) {
@@ -48,6 +48,7 @@ body  {
 }
 
 .asideTitle {
+display: none;
 font-family: $fontFamily2;
 font-size: $fontSize--h1;
 text-transform: uppercase;
@@ -68,6 +69,22 @@ transform: rotate(-90deg);
     .asideTitle__rotate--white {
         color: $bgColor;
     }
+
+        @media only screen and (min-width : $screen-sm) {
+
+    }
+
+    @media only screen and (min-width : $screen-md) {
+        display: block;
+    }
+
+    @media only screen and (min-width : $screen-lg) {
+        
+    }
+
+    @media only screen and (min-width : $screen-xl) {
+        
+    }
 }
 
 
@@ -78,7 +95,7 @@ transform: rotate(-90deg);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     // overflow: hidden;
 }
