@@ -35,7 +35,7 @@ body  {
     }
 
     @media only screen and (min-width : $screen-md) {
-        width: 720px;        
+        width: 768px;        
     }
 
     @media only screen and (min-width : $screen-lg) {
@@ -66,11 +66,7 @@ transform: rotate(-90deg);
         letter-spacing: .3rem;
     }
 
-    .asideTitle__rotate--white {
-        color: $bgColor;
-    }
-
-        @media only screen and (min-width : $screen-sm) {
+    @media only screen and (min-width : $screen-sm) {
 
     }
 
@@ -94,10 +90,29 @@ transform: rotate(-90deg);
 %blockStartFlexRow {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     // overflow: hidden;
+
+    @media only screen and (min-width : $screen-sm) {
+
+    }
+
+    @media only screen and (min-width : $screen-md) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    @media only screen and (min-width : $screen-lg) {
+        
+    }
+
+    @media only screen and (min-width : $screen-xl) {
+    
+    }
+        
 }
 
 %bgBlockColor {

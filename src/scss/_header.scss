@@ -57,7 +57,7 @@
 @media only screen and (min-width : $screen-xs) {
     
     .header {
-        height: 60px;
+        height: 40px;
     }
 
     .header__nav {
@@ -70,11 +70,15 @@
         left: 0;
         background: $blueGradient;
         margin: 0;
-        display: block;
+        display: none;
         height: 100vh;
         width: 100%;
         z-index: 100;
         padding-top: 4rem;
+    }
+
+    .header__navList--active {
+        display: block;
     }
 
     .header__navItem {
