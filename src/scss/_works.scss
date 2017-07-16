@@ -12,16 +12,16 @@ padding-top: 3rem;
 }
 
 .works__title {
-  align-self: flex-start;
+    align-self: flex-start;
     margin-bottom: 2rem;
-
+    padding: 1.5em 0;
     padding-left: 7rem;
 
     display: block;
     width: 100%;
     position: relative;
 
-    line-height: 4;
+    line-height: 1.375;
     
     font-family: $fontFamily1;
     font-size: $fontSize--h2;
@@ -64,24 +64,23 @@ padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .works__item {
-    width: 31%;
-    margin: 0 10px 30px 10px;
+    width: 100%;
+    margin: 0 -2rem 4rem;
     overflow: hidden;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: all .5s;
 
-    &:hover {
-        transform: rotateY(90deg);
-        perspective: 30px 400px;
-        backface-visibility: hidden;
-    }
+    // &:hover {
+    //     transform: rotateY(90deg);
+    //     perspective: 30px 400px;
+    //     backface-visibility: hidden;
+    // }
 }
 
 .works__img {
@@ -91,9 +90,40 @@ width: 100%;
 
 .works__descr {
     background-color: $bgColor;
-    padding: 15px;
+    padding: 1.5rem;
     font-family: $fontFamily1;
     font-size: $fontSize--small;
     color: $textBlack;
     text-align: justify;
+}
+
+@media only screen and (min-width : $screen-sm) {
+    .works__list {
+        justify-content: space-around;
+    }
+    .works__item {
+        width: 32rem;
+        margin: 0 .5rem 3rem;
+    }
+}
+
+@media only screen and (min-width : $screen-md) {
+
+    .works__item {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width : $screen-lg) {
+    .works__item {
+        width: 42%;
+        margin: 0 1.5rem 3rem;
+    }
+}
+
+@media only screen and (min-width : $screen-xl) {
+    .works__item {
+        width: 31%;
+        margin: 0 1rem 3rem;
+    }
 }

@@ -10,22 +10,23 @@
 </head>
 <body>
 
+<div class="bodyWrapper">
+
 <!-- ==== header BEGIN ==== -->
-<header class="header">        
-    <nav class="header__nav">
-        <div class="container">
-            <button class="menuBtn">меню</button>
-            <ul class="header__navList">
-                <li class="header__navItem"><a href="#">Обо мне</a></li>
-                <li class="header__navItem"><a href="#">Навыки</a></li>
-                <li class="header__navItem"><a href="#">Примеры работ</a></li>
-                <li class="header__navItem"><a href="#">Образование</a></li>
-                <li class="header__navItem"><a href="#">Опыт работы</a></li>
-            </ul>
-        </div>
+<header class="header">
+    <button class="menuBtn">меню</button>      
+    <nav class="header__nav">            
+        <ul class="header__navList">
+            <li class="header__navItem"><a href="#">Обо мне</a></li>
+            <li class="header__navItem"><a href="#">Навыки</a></li>
+            <li class="header__navItem"><a href="#">Примеры работ</a></li>
+            <li class="header__navItem"><a href="#">Образование</a></li>
+            <li class="header__navItem"><a href="#">Опыт работы</a></li>
+        </ul>
     </nav>
 </header>
 <!-- ==== header END ==== -->
+
 
 <!-- ==== hero BEGIN ==== -->
 <section class = "hero">    
@@ -45,7 +46,7 @@
             </div>
         </div>
     </article>
-    <div class="hero__img"><img src="\img\desk.png" alt="laptop"></div>
+    <div class="hero__img"><img src="..\img\desk.png" alt="laptop"></div>
 </section>
 <!-- ==== hero END ==== -->
 
@@ -95,12 +96,12 @@
             <li class="skillBlockMain__item">CSS</li>
             <li class="skillBlockMain__item">JavaScript</li>
             <li class="skillBlockMain__item">JQuery</li>
-            <li class="skillBlockMain__item">Adobe Photoshop</li>
-            <li class="skillBlockMain__item">Adobe Illustrator</li>
+            <li class="skillBlockMain__item"><span class="mobileHide">Adobe</span> Photoshop</li>
+            <li class="skillBlockMain__item"><span class="mobileHide">Adobe</span> Illustrator</li>
             <li class="skillBlockMain__item">3DS Max</li>
             <li class="skillBlockMain__item">PHP</li>
         </ul>
-        <h3 class="skillBlockSecond__title">Знаком со следующими инструментами и понятиями</h3>
+        <h3 class="skillBlockSecond__title">Инструментарий</h3>
         <ul class="skillBlockSecond__list">
             <li class="skillBlockSecond__item">SCSS</li>
             <li class="skillBlockSecond__item">Bootstrap</li>
@@ -313,13 +314,13 @@
 <!-- ==== workExp END ==== -->
 
 <!-- ==== footer BEGIN ==== -->
-<footersection class = "footer">
+<footer class = "footer">
 
-</footersection>
+</footer>
 <!-- ==== footer END ==== -->
+</div>
 
-
-
+    <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>

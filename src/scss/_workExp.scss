@@ -20,7 +20,11 @@
        svg {
         width: 65%;
         height: 65%;
-        margin: .9rem 0 0 1.05rem;
+        margin: .6rem 0 0 .65rem;
+
+            @media only screen and (min-width : $screen-sm) {
+                margin: .9rem 0 0 1.05rem;
+            }   
         }
 }
 
@@ -29,15 +33,15 @@
 }
 
 .workExp__year {
-@extend .education__school;
+    @extend .education__school;
 }
 
 .workExp__spec {
-@extend .education__spec;
+    @extend .education__spec;
 }
 
 .workExp__org {
-@extend .education__acadDegree;
+    @extend .education__acadDegree;
 }
 
 .workExp__descr {

@@ -18,13 +18,14 @@ z-index: 26;
 .skillBlockLanguage__title {
     align-self: flex-start;
     margin-bottom: 3rem;
+    padding: 1.5em 0;
     padding-left: 7rem;
 
     display: block;
     width: 100%;
     position: relative;
 
-    line-height: 4;
+    line-height: 1.375;
     
     font-family: $fontFamily1;
     font-size: $fontSize--h2;
@@ -37,15 +38,15 @@ z-index: 26;
 		content: '';
 		height: 102%;
 		width: 60px;
-		top: 0;
+		top: -1px;
 		left: -3rem;
         background-color: #fff;
 
 		box-shadow: 2px 7px 0 $blue,
 		4px -2px 0 #fff,
-		6px -7px 0 $orange;
+		6px -8px 0 $orange;
 
-		transform: skewX(-25deg);
+		transform: skewX(-25deg) scaleY(1.1);
 	}
 
         &::after {
@@ -54,7 +55,7 @@ z-index: 26;
 		height: 50%;
 		width: 7px;
 		top: 23%;
-		left: 4rem;
+		left: 4.1rem;
         background-color: $blue;
 
 		transform: skewX(-25deg);
@@ -63,7 +64,7 @@ z-index: 26;
 
 .skillBlockMain__list {    
     align-self: flex-end;
-    width: 90%;
+    width: 150%;
 
     display: flex;
     flex-wrap: nowrap;
@@ -71,18 +72,22 @@ z-index: 26;
     justify-content: flex-start;
     align-items: stretch;
     text-align: right;
+    align-self: center;
 
-    margin-bottom: 3rem;
+    padding-top: 10px;
+    transform: rotate(90deg);
+    margin-bottom: 10rem;
 }
 
 .skillBlockMain__item {
-    padding: 1.4rem;
-    margin-bottom: 10px;
+    padding: .9rem;
+    padding-left: .1rem;
+    margin-bottom: 5px;
     position: relative;    
     overflow: hidden;
     font-family: $fontFamily1;
-    font-size: $fontSize;
-    font-weight: bold;
+    font-size: $fontSize - 0.1;
+    font-weight: normal;
     color: $bgColor;
     text-shadow: $textShadow;
     line-height: 1.4rem;
@@ -101,15 +106,14 @@ z-index: 26;
     }
 
     &::after {
-        display: block;
+        display: none;
         position: absolute;
         top: 0;               
         height: 100%;
         z-index: 1;
-        padding-top: 1.2rem;
-        font-size: 1.75rem;
+        padding-top: 1rem;
 
-        font-size: 1.8rem;
+        font-size: 1.375rem;
         font-weight: normal;
     }
 
@@ -123,9 +127,12 @@ z-index: 26;
     @include skillBar(20, 8); //PHP
 }
 
+.mobileHide {
+    display: none;
+}
+
 .skillBlockSecond__list {
     width: 100%;
-    padding-left: 6rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -137,7 +144,7 @@ z-index: 26;
 .skillBlockSecond__item {
     display: inline-block;
     border: 1px solid $grey;
-    padding: .8rem 1.6rem;
+    padding: .6rem 1rem;
     margin: 1rem 1.4rem;
     font-family: $fontFamily1;
     font-size: $fontSize--h2;
@@ -151,15 +158,18 @@ z-index: 26;
 
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    flex-grow: 0;
 }
 
 
 .skillBlockLanguage__item {
     position: relative;
     margin-bottom: 8rem;
+    flex-grow: 0;
+    transform: scale(.9);
 
     &--ru {
         @include roundBar(160px, 90, $grey, $blue, $bgColor, 0);
@@ -197,4 +207,100 @@ z-index: 26;
     color: $textGrey;
     letter-spacing: normal;
 
+}
+
+@media only screen and (min-width : 360px) {
+    .skillBlockMain__title {
+        margin-bottom: 4.5rem;
+    }
+
+    .skillBlockMain__item::after {
+        display: block;
+    }
+
+    .skillBlockMain__list { 
+        margin-bottom: 15rem;
+    }
+}
+
+@media only screen and (min-width : $screen-sm) {
+    .skillBlockMain__title {
+        margin-bottom: 3rem;
+    }
+
+    .skillBlockMain__list {
+        margin: 0 0 3rem 0;
+        width: 110%;
+        transform: none;
+        padding-top: 0;
+        align-self: flex-end;
+        }
+
+        .skillBlockMain__item {
+        padding: 1.4rem;
+        margin-bottom: 10px;
+        padding: .9rem;
+        font-weight: bold;
+        font-size: $fontSize;
+        letter-spacing: normal;
+        }
+
+    .skillBlockMain__item::after {
+        padding-top: .85rem;
+        font-size: 1.6rem;
+    }
+
+    .skillBlockLanguage__list {
+        flex-direction: row;        
+    }
+
+    .skillBlockLanguage__item {
+        transform: scale(.8);
+    }
+}
+
+@media only screen and (min-width : $screen-md) {
+        .skillBlockMain__list {
+        margin: 0 0 3rem 0;
+        width: 90%;
+        transform: none;
+        padding-top: 0;
+        }
+
+        .skillBlockMain__item {
+        padding: 1.4rem;
+        margin-bottom: 10px;
+        padding: .9rem;
+        font-weight: bold;
+        font-size: $fontSize;
+        }
+
+    .skillBlockMain__item::after {
+        padding-top: 1rem;
+        font-size: 1.75rem;
+    }
+
+    .mobileHide {
+        display: inline;
+    }
+
+    .skillBlockSecond__list {
+        padding-left: 6rem;
+    }
+
+    .skillBlockSecond__item {
+        padding: .8rem 1.6rem;
+    }
+
+    .skillBlockLanguage__item {
+        transform: none;
+    }
+}
+
+@media only screen and (min-width : $screen-lg) {
+    
+}
+
+@media only screen and (min-width : $screen-xl) {
+    
 }

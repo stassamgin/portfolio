@@ -12,18 +12,18 @@
 }
 
 .education__list  {
-    width: calc(100% - 15rem);
+    width: calc(100% - 5rem);
     margin-left: auto;
     position: relative;
-    padding-top: 6rem;
+    padding-top: 3rem;
 
     &::before {
         content: '';
         width: 2px;
-        height: calc(100% + 4rem);
+        height: calc(100% + 3rem);
         position: absolute;
-        top: -2rem;
-        left: - $educMarkerMargin;
+        top: -1rem;
+        left: - $educMarkerMargin + 3rem;
         background: linear-gradient(0, transparent, $blue 8rem);
         z-index: 10;
     }
@@ -31,10 +31,10 @@
 
 .education__icon {
     position: absolute;
-    width: 6rem;
-    height: 6rem;
-    top: -2rem;
-    left: - $educMarkerMargin - 3rem;
+    width: 4rem;
+    height: 4rem;
+    top: -1rem;
+    left: - $educMarkerMargin + 3rem - 2rem;
     z-index: 15;
     background: $bgColor;
     border: 2px solid $blue;
@@ -43,7 +43,7 @@
     svg {
         width: 70%;
         height: 70%;
-        margin: .9rem 0 0 .9rem;
+        margin: .6rem 0 0 .6rem;
 
         * {
             fill: $textBlack;
@@ -66,7 +66,7 @@
         border: .6rem solid $bgColor;
         position: absolute;
         top: 0;
-        left: - $educMarkerMargin - .51rem - .6rem/2;
+        left: - $educMarkerMargin + 3rem - .4rem - .2rem - .6rem/2;
         background-color: $orange;
         z-index: 11;
     }
@@ -118,4 +118,44 @@
     color: $textBlack;
     text-align: justify;
     text-indent: 2rem;
+}
+
+@media only screen and (min-width : $screen-sm) {
+    .education__list  {
+    width: calc(100% - 10rem);
+    padding-top: 6rem;
+
+        &::before {
+            left: - $educMarkerMargin;
+            height: calc(100% + 4rem);
+            top: -2rem;
+        }
+    }
+
+    .education__icon {
+        width: 6rem;
+        height: 6rem;
+        top: -2rem;
+        left: - $educMarkerMargin - 3rem;
+
+        svg {        
+            margin: .9rem 0 0 .9rem;
+        }
+    }
+
+    .education__item::before  {
+        left: - $educMarkerMargin - .4rem - .2rem - .6rem/2;
+    }
+}
+
+@media only screen and (min-width : $screen-md) {
+    .education__descr {
+        padding-right: 2rem;
+    }
+}
+
+@media only screen and (min-width : $screen-lg) {
+    .education__descr {
+        padding-right: 0;
+    }
 }
