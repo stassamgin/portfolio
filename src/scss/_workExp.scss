@@ -1,5 +1,7 @@
 .workExp {
     @extend %blockStartFlexRow;
+    margin-top: 1rem;
+    padding-top: 3rem;
 }
  
 .workExp__block {

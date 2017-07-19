@@ -1,17 +1,25 @@
 .skills {
 @extend %blockStartFlexRow;
 z-index: 26;
+padding-top: 3rem;
 }
 
-.skills__skillBlock {
+.skills__skillBlock,
+.skillBlockMain, 
+.skillBlockSecond, 
+.skillBlockLanguage {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    // overflow: hidden;
     width: 100%;
+    position: relative;
 }
+
+// .skillBlockMain {
+//     @extend %bgBlockColor;
+// }
 
 .skillBlockMain__title, 
 .skillBlockSecond__title,

@@ -8,6 +8,7 @@
     "gulp-minify-css": "latest",
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
+    "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
@@ -20,4 +21,3 @@
   "author": "stassamgin",
   "license": "ISC"
 }
-

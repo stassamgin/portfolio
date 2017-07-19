@@ -158,6 +158,22 @@
         height: 750px;
         padding-top: 3.5rem;      
     }
+
+    .hero__opener {
+        align-items: center;    
+    }
+
+    .hero__title {
+        width: 500px;
+    }
+    
+    .hero__discr {
+        width: 500px;
+    }
+    
+    .hero__resume {
+        width: 500px;
+    }
 }
 
 @media only screen and (min-width : $screen-lg) {
@@ -175,7 +191,8 @@
 
     .hero__opener {
         height: auto;
-        justify-content: flex-start;    
+        justify-content: flex-start;
+        align-items: flex-start;   
     }    
     
     .hero__title {
