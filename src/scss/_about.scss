@@ -6,6 +6,11 @@
     z-index: 25;
 }
 
+.asideTitle__rotate--about {
+    top: -3rem;
+    left: -5rem;
+}
+
 .about__aboutBlock {
     @extend %blockStartFlexRow;
     width: 100%;
@@ -83,13 +88,18 @@ min-width: 290px;
         margin-bottom: 0;      
     }
 
+    a {
+        color: $textBlack;
+        text-decoration: underline;
+    }
+
     span {
         font-weight: bold;          
         color: $textBlack;
     }
     
     .about__contactItemPadding {
-            padding: 38px;
+            padding: 4.375rem;
             font-weight: 400;
             color: $textGrey;
         }

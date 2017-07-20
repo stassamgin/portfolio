@@ -17,11 +17,11 @@
     <button class="menuBtn">меню</button>      
     <nav class="header__nav">            
         <ul class="header__navList">
-            <li class="header__navItem"><a href="#">Обо мне</a></li>
-            <li class="header__navItem"><a href="#">Навыки</a></li>
-            <li class="header__navItem"><a href="#">Примеры работ</a></li>
-            <li class="header__navItem"><a href="#">Образование</a></li>
-            <li class="header__navItem"><a href="#">Опыт работы</a></li>
+            <li class="header__navItem"><a href="about">Обо мне</a></li>
+            <li class="header__navItem"><a href="skills">Навыки</a></li>
+            <li class="header__navItem"><a href="works">Примеры работ</a></li>
+            <li class="header__navItem"><a href="education">Образование</a></li>
+            <li class="header__navItem"><a href="workExp">Опыт работы</a></li>
         </ul>
     </nav>
 </header>
@@ -52,7 +52,7 @@
 
 <!-- ==== about BEGIN ==== -->
 <section class = "about container">
-    <h2 class="asideTitle"><span class="asideTitle__rotate">Обо мне</span></h2>
+    <h2 class="asideTitle"><span class="asideTitle__rotate asideTitle__rotate--about">Обо мне</span></h2>
     <div class="about__aboutBlock">
         <div class="about__info">
             <div class="about__title">Станислав Самгин</div>
@@ -88,7 +88,7 @@
 
 <!-- ==== skills BEGIN ==== -->
 <section class ="skills container">
-    <h2 class="asideTitle"><span class="asideTitle__rotate">Навыки</span></h2>
+    <h2 class="asideTitle"><span class="asideTitle__rotate asideTitle__rotate--skills">Навыки</span></h2>
     <div class="skills__skillBlock">
         <div class="skillBlockMain">
             <h3 class="skillBlockMain__title">Профессиональные навыки</h3>
@@ -149,7 +149,7 @@
 
 <!-- ==== works BEGIN ==== -->
 <section class = "works container">
-    <h2 class="asideTitle"><span class="asideTitle__rotate">Мои работы</span></h2>
+    <h2 class="asideTitle"><span class="asideTitle__rotate asideTitle__rotate--works">Мои работы</span></h2>
     <div class="works__block">
        <h3 class="works__title">Примеры моих работ</h3>
        <ul class="works__list">
@@ -157,6 +157,14 @@
                <img src="img/ep3-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Лэндинг был написан для предприятия занимающегося доставкой товара с мировых торговых площадок. <br>Адаптивный, кроссбраузерный. Дизайн, инфографика разрабатывались мной.</p>                   
+                    <div class="work__link">
+                       <a href="http://ep3.ru/">
+                           @@include('template/link.svg')
+                        </a>
+                       <a href="https://github.com/Nigmas/ep3">
+                           @@include('template/github.svg')
+                        </a>
+                    </div>
                </div>
                <div class="works__tools">HTML, SCSS, Jquery, gulp</div>
            </li>
@@ -164,6 +172,14 @@
                <img src="img/fedorova-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Сайт находящийся в стадии запуска, разработанный для мастера по индивидуальному пошиву одежды. <br>Сверстан с помощью flexbox. Адаптивный, кроссбраузерный. Дизайн, логотип разрабатывались мной.</p>                   
+                   <div class="work__link">
+                       <a href="http://lizafedorova.pe.hu/">
+                           @@include('template/link.svg')
+                        </a>
+                       <a href="https://github.com/Nigmas/EF">
+                           @@include('template/github.svg')
+                        </a>
+                    </div>
                </div>
                <div class="works__tools">HTML, SCSS, Jquery, gulp</div>
            </li>
@@ -171,6 +187,11 @@
                <img src="img/notify-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Тестовый сайт, который я сделал с единственной целью – занять ячейку в портфолио. Пока не адаптивен, но скоро это исправлю.</p>                   
+                   <div class="work__link">
+                       <a href="https://github.com/Nigmas/notify">
+                           @@include('template/github.svg')
+                        </a>
+                    </div>
                </div>
                <div class="works__tools">HTML, CSS, JS</div>
            </li>
@@ -178,6 +199,11 @@
                <img src="img/flat-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Проект дизайна квартиры. Разработка дизайна, трехмерная визуализация, постобработка. В проекте использовались сторонние модели предметов интерьера. </p>                   
+                   <div class="work__link">
+                       <a href="img/full_flat-min.jpg">
+                           @@include('template/zoom.svg')
+                        </a>
+                    </div>
                </div>
                <div class="works__tools">3DS Max, V-Ray, Photoshop</div>
            </li>
@@ -185,6 +211,11 @@
                <img src="img/build-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Проект экстерьера жилого дома с летней площадкой и печью. Разработка дизайна, трехмерная визуализация, постобработка.</p>                   
+                   <div class="work__link">
+                       <a href="img/full_build-min.jpg">
+                           @@include('template/zoom.svg')
+                        </a>
+                    </div>
                </div>
                <div class="works__tools">3DS Max, V-Ray, Photoshop</div>
            </li>
@@ -192,6 +223,11 @@
                <img src="img/cups-min.jpg" alt="" class="works__img">
                <div class="works__descr">
                    <p>Трехмерная модель. Разработка дизайна, трехмерная визуализация.</p>
+                   <div class="work__link">
+                       <a href="img/full_cups-min.jpg">
+                           @@include('template/zoom.svg')
+                        </a>
+                    </div>
                 </div>
                 <div class="works__tools">3DS Max, V-Ray</div>
            </li>           
@@ -202,7 +238,7 @@
 
 <!-- ==== education BEGIN ==== -->
 <section class = "education container">
-    <h2 class="asideTitle"><span class="asideTitle__rotate">Образование</span></h2>
+    <h2 class="asideTitle"><span class="asideTitle__rotate asideTitle__rotate--education">Образование</span></h2>
     <div class="education__block">
             <div class="education__title">Мое образование</div>
             <ul class="education__list">
@@ -242,11 +278,11 @@
                     </svg>
                 </li>
                 <li class="education__item">
-                    <div class="education__school">Донбасский Государственный технический Университет</div>
-                    <div class="education__spec">инженер-механик</div>
+                    <div class="education__school">Одесский национальный университет имени И. И. Мечникова</div>
+                    <div class="education__spec">правоведение</div>
                     <div class="education__acadDegree">специалист</div>
-                    <div class="education__year">2003 - 2008</div>
-                    <div class="education__descr">В 2008 году мной была получена специальность инженер-механик. Считаю, что основным плюсом приобретения данного образования было формирование технического образа мышления, умения использовать, читать и создавать механизмы, детали, схемы, чертежи. Также данная специальность создала замечательную математическую и логическую базу. В процессе обучения заложен интерес и базовые навыки работы с AutoCAD, а в последствии с трехмерной графикой 3d studio max.</div>
+                    <div class="education__year">2010 - 2014</div>
+                    <div class="education__descr">В 2010 году, получил диплом по специальности правоведение. Благодаря полученным знаниям окончательно сформирована картина работы бизнеса и государства, а также механизм их взаимодействия, принципы взаимодействия субъектов. Приобретены ценные навыки работы с заказчиком, умение аргументированно убеждать и отстаивать свою позицию, умение понимать потребности клиента чуть больше, чем понимает он сам. </div>
                 </li>
                 <li class="education__item">
                     <div class="education__school">Донбасский Государственный технический Университет</div>
@@ -254,13 +290,13 @@
                     <div class="education__acadDegree">специалист</div>
                     <div class="education__year">2007 - 2009</div>
                     <div class="education__descr">В 2009 году, на базе первого высшего образования мной был получен диплом по специальности «Финансы». Сформированы навыки бюджетирования проектов, умение оценить потребности бизнеса и конъектуру рынка, навыки работы с финансами и отчетностью, понимание финансовой системы и ее потребностей.</div>
-                </li>
+                </li>                
                 <li class="education__item">
-                    <div class="education__school">Одесский национальный университет имени И. И. Мечникова</div>
-                    <div class="education__spec">правоведение</div>
+                    <div class="education__school">Донбасский Государственный технический Университет</div>
+                    <div class="education__spec">инженер-механик</div>
                     <div class="education__acadDegree">специалист</div>
-                    <div class="education__year">2010 - 2014</div>
-                    <div class="education__descr">В 2010 году, получил диплом по специальности правоведение. Благодаря полученным знаниям окончательно сформирована картина работы бизнеса и государства, а также механизм их взаимодействия, принципы взаимодействия субъектов. Приобретены ценные навыки работы с заказчиком, умение аргументированно убеждать и отстаивать свою позицию, умение понимать потребности клиента чуть больше, чем понимает он сам. </div>
+                    <div class="education__year">2003 - 2008</div>
+                    <div class="education__descr">В 2008 году мной была получена специальность инженер-механик. Считаю, что основным плюсом приобретения данного образования было формирование технического образа мышления, умения использовать, читать и создавать механизмы, детали, схемы, чертежи. Также данная специальность создала замечательную математическую и логическую базу. В процессе обучения заложен интерес и базовые навыки работы с AutoCAD, а в последствии с трехмерной графикой 3d studio max.</div>
                 </li>
             </ul>
     </div>
@@ -269,12 +305,12 @@
 
 <!-- ==== workExp BEGIN ==== -->
 <section class = "workExp container">
-        <h2 class="asideTitle"><span class="asideTitle__rotate">Опыт работы</span></h2>
+        <h2 class="asideTitle"><span class="asideTitle__rotate asideTitle__rotate--workExp">Опыт работы</span></h2>
     <div class="workExp__block">
             <div class="workExp__title">Опыт работы</div>
             <ul class="workExp__list">
                 <li class="workExp__icon">
-                  //= template/workExp.svg
+                  @@include('template/workExp.svg')
                 </li>
                 <li class="workExp__item">
                     <div class="workExp__year">февраль 2016 – настоящий момент</div>
@@ -307,12 +343,13 @@
 
 <!-- ==== footer BEGIN ==== -->
 <footer class = "footer">
-
+&copy; С.А. Самгин, 2017
 </footer>
 <!-- ==== footer END ==== -->
+
+<div class="scroll_progress"></div>
 </div>
 
-    <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>

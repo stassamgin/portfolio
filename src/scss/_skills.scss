@@ -1,7 +1,14 @@
 .skills {
-@extend %blockStartFlexRow;
-z-index: 26;
-padding-top: 3rem;
+    @extend %blockStartFlexRow;
+    z-index: 26;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.asideTitle__rotate--skills {
+    top: -30rem;
+    left: -4rem;
+
 }
 
 .skills__skillBlock,

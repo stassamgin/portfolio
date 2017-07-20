@@ -4,7 +4,8 @@
 var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	notify = require('gulp-notify'),
-	uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify'),
+    fileinclude = require('gulp-file-include'),
 	sass = require('gulp-sass'),
 	minifyCss = require('gulp-minify-css'),	
     autoprefixer = require('gulp-autoprefixer'),
@@ -37,6 +38,7 @@ gulp.task('getHtml', function(){
     .pipe(plumber({
         errorHandler: notify.onError()
     }))
+    .pipe(fileinclude())
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
 });
@@ -60,7 +62,7 @@ gulp.task('getJs', function(){
     .pipe(plumber({
         errorHandler: notify.onError()
     }))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });

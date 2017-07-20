@@ -5,6 +5,7 @@
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-file-include": "^1.1.0",
     "gulp-minify-css": "latest",
     "gulp-notify": "latest",
     "gulp-plumber": "latest",

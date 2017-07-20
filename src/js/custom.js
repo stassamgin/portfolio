@@ -16,7 +16,7 @@ window.onscroll = function() {
   var offset = window.pageYOffset || document.documentElement.scrollTop,
   		windowHeight = document.documentElement.scrollHeight-document.documentElement.clientHeight,
       progress = Math.floor(offset/windowHeight * 100);
-  scrollProgress.style.width = progress + '%';;
+  scrollProgress.style.width = progress + '%';
 }
 
 // EVENT MENU CLICK - SCROLL ON BLOCK
@@ -26,7 +26,7 @@ document.querySelector('.header__navList').onclick = function(e) {
     var target = e.target;
     if (target.tagName != 'A') return;
     var href = target.getAttribute('href'),
-        elem = document.querySelector('.' + href)
+        elem = document.querySelector('.' + href);
 
     window.scrollTo(0, getElementHeight(elem));
 
@@ -39,3 +39,4 @@ function getElementHeight (elem) {
     var box = elem.getBoundingClientRect();
     return box.top + pageYOffset;
 }
+
