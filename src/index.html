@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Портфолио Станислава Самгина</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Rubik+Mono+One&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,19 +34,19 @@
     <article class="hero__opener container">
         <h1 class="hero__title">Портфолио Станислава Самгина</h1>
         <div class="hero__discr">
-            <p>Привет! Я рад видеть Вас на своем профессиональном сайте. Если Вы здесь, то, скорее всего, я заинтересовал Вас как специалист по веб-разработке. Я искренне надеюсь убедить Вас, что сотрудничество со мной это не такая уж плохая идея :)</p>
+            <p>Привет! Я рад видеть Вас на своем профессиональном сайте. Если Вы здесь, то, скорее всего, я заинтересовал Вас как специалист по веб-разработке, и я попытаюсь убедить Вас, что сотрудничество со мной это замечательная идея :)</p>
         </div>
         <div class="hero__resume">
             <span class="hero__discrResume">
                 скачать резюме: 
             </span>
             <div class="hero__btn">
-                <div class="btn">.PDF</div>
-                <div class="btn">Word</div>
+                <div class="btn"><a id="js-res-pdf" href="file/SAMGIN_STANISLAV_FRONTEND_RU.pdf">PDF</a></div>
+                <div class="btn"><a id="js-res-docx" href="file/SAMGIN_STANISLAV_FRONTEND_RU.docx">Word</a></div>
             </div>
         </div>
     </article>
-    <div class="hero__img"><img src="..\img\desk.png" alt="laptop"></div>
+    <div class="hero__img"><img src="img/desk.png" alt="laptop"></div>
 </section>
 <!-- ==== hero END ==== -->
 
@@ -57,7 +57,9 @@
         <div class="about__info">
             <div class="about__title">Станислав Самгин</div>
             <div class="about__subtitle">Веб-разработчик, верстальщик</div>
-            <div class="about__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, itaque modi consequatur eum incidunt id ipsa, distinctio obcaecati atque amet aliquam voluptates odio? Deleniti, voluptates perspiciatis, nemo animi aliquam quis.</div>
+            <div class="about__descr">Веб разработка началась для меня как любопытство и выросло в дело всей жизни. Я действительно люблю то, чем я занимаюсь и стараюсь быть на гребне переменчивой волны фронтэнда. 
+По опыту первой профессии имею солидный стаж работы с предприятиями и учреждениями, поэтому отлично понимаю, как особенности работы с ними, так и их бизнес потребности, а также что такое сжатые сроки и ограниченный бюджет. Большое внимание уделяю самообразованию и профессиональному росту. 
+</div>
         </div>
         <div class="about__contact">
             <div class="photo">
@@ -65,7 +67,7 @@
             </div>
             <ul class="about__contactList">
                 <li class="about__contactItem">
-                    <span >Год раждения: </span>31.07.1985
+                    <span >Год рождения: </span>31.07.1985
                 </li>
                 <li class="about__contactItem">
                     <span>Viber: </span><a href="tel:+380953176971">+38 095 3176971</a>
@@ -73,12 +75,16 @@
                 <li class="about__contactItem">
                     <span >e-mail: </span><a href="mailto:stassamgin@gmail.com">stassamgin@gmail.com</a>
                 </li>
-
                 <li class="about__contactItem">
-                    <span >website: </span><a href="#">this</a>
+                    <span >LinkedIn: </span><a href="https://www.linkedin.com/in/stassamgin">linkedin.com/in/stassamgin</a>
                 </li>
                 <li class="about__contactItem">
-                    <span >Адрес: </span>ул. М.Василенко, г.Симферополь /<br> <span class="about__contactItemPadding">кв.Ватутина, г. Луганск</span>
+                    <span >website: </span><a href="#">stassamgin.pe.hu</a>
+                </li>
+                <li class="about__contactItem" id="js-adres">
+                    <span >Адрес: </span>ул. М.Василенко,<br>
+                    <span class="about__contactItemPadding"> г. Симферополь</span> 
+                    <!-- ул. Вышгородская, г.Киев -->
                 </li>
             </ul>
         </div>
@@ -154,7 +160,7 @@
        <h3 class="works__title">Примеры моих работ</h3>
        <ul class="works__list">
            <li class="works__item">
-               <img src="img/ep3-min.jpg" alt="" class="works__img">
+               <img src="img/ep3-min.jpg" alt="ep3.ru" class="works__img">
                <div class="works__descr">
                    <p>Лэндинг был написан для предприятия занимающегося доставкой товара с мировых торговых площадок. <br>Адаптивный, кроссбраузерный. Дизайн, инфографика разрабатывались мной.</p>                   
                     <div class="work__link">
@@ -169,7 +175,7 @@
                <div class="works__tools">HTML, SCSS, Jquery, gulp</div>
            </li>
            <li class="works__item">
-               <img src="img/fedorova-min.jpg" alt="" class="works__img">
+               <img src="img/fedorova-min.jpg" alt="lizafedorova.pe.hu" class="works__img">
                <div class="works__descr">
                    <p>Сайт находящийся в стадии запуска, разработанный для мастера по индивидуальному пошиву одежды. <br>Сверстан с помощью flexbox. Адаптивный, кроссбраузерный. Дизайн, логотип разрабатывались мной.</p>                   
                    <div class="work__link">
@@ -184,7 +190,7 @@
                <div class="works__tools">HTML, SCSS, Jquery, gulp</div>
            </li>
            <li class="works__item">
-               <img src="img/notify-min.jpg" alt="" class="works__img">
+               <img src="img/notify-min.jpg" alt="Тестовый сайт" class="works__img">
                <div class="works__descr">
                    <p>Тестовый сайт, который я сделал с единственной целью – занять ячейку в портфолио. Пока не адаптивен, но скоро это исправлю.</p>                   
                    <div class="work__link">
@@ -196,11 +202,11 @@
                <div class="works__tools">HTML, CSS, JS</div>
            </li>
            <li class="works__item">
-               <img src="img/flat-min.jpg" alt="" class="works__img">
+               <img src="img/flat-min.jpg" alt="Проект дизайна квартиры" class="works__img">
                <div class="works__descr">
                    <p>Проект дизайна квартиры. Разработка дизайна, трехмерная визуализация, постобработка. В проекте использовались сторонние модели предметов интерьера. </p>                   
                    <div class="work__link">
-                       <a href="img/full_flat-min.jpg">
+                       <a href="img/full_flat-min.jpg" target="_blank">
                            @@include('template/zoom.svg')
                         </a>
                     </div>
@@ -208,11 +214,11 @@
                <div class="works__tools">3DS Max, V-Ray, Photoshop</div>
            </li>
            <li class="works__item">
-               <img src="img/build-min.jpg" alt="" class="works__img">
+               <img src="img/build-min.jpg" alt="Проект экстерьера жилого дома" class="works__img">
                <div class="works__descr">
                    <p>Проект экстерьера жилого дома с летней площадкой и печью. Разработка дизайна, трехмерная визуализация, постобработка.</p>                   
                    <div class="work__link">
-                       <a href="img/full_build-min.jpg">
+                       <a href="img/full_build-min.jpg" target="_blank">
                            @@include('template/zoom.svg')
                         </a>
                     </div>
@@ -220,11 +226,11 @@
                <div class="works__tools">3DS Max, V-Ray, Photoshop</div>
            </li>
            <li class="works__item">
-               <img src="img/cups-min.jpg" alt="" class="works__img">
+               <img src="img/cups-min.jpg" alt="Трехмерная модель" class="works__img">
                <div class="works__descr">
                    <p>Трехмерная модель. Разработка дизайна, трехмерная визуализация.</p>
                    <div class="work__link">
-                       <a href="img/full_cups-min.jpg">
+                       <a href="img/full_cups-min.jpg" target="_blank">
                            @@include('template/zoom.svg')
                         </a>
                     </div>
@@ -281,27 +287,27 @@
                   @@include('template/workExp.svg')
                 </li>
                 <li class="workExp__item">
-                    <div class="workExp__year">февраль 2016 – настоящий момент</div>
+                    <div class="workExp__year">апрель 2015 – настоящий момент</div>
                     <div class="workExp__spec">веб-разработка</div>
                     <div class="workExp__org">freelance</div>
-                    <div class="workExp__descr">С февраля 2016 начал активное погружение в чудесный мир веб-разработки. Пройдено, просмотрено и прочитано огромное количество материала. Были написаны учебные сайты, после сайты для себя, затем сайты для знакомых, а потом и для посторонних заказчиков. Заказы получаю, как правило, через рекомендации от старых заказчиков, но в ближайшее время собираюсь полноценно выходить на фриланс биржи.</div>
+                    <div class="workExp__descr">С апреля 2015 начал активное погружение в чудесный мир веб-разработки. Пройдено, просмотрено и прочитано огромное количество материала. Были написаны пробные странички, после сайты для себя, затем сайты для знакомых, а потом и для посторонних заказчиков. Заказы получаю, как правило, через рекомендации от бывших клиентов, а также через поиск новых клиентов через фриланс биржи.</div>
                 </li>  
                 <li class="workExp__item">
-                    <div class="workExp__year">ноябрь 2015 – февраль 2017</div>
+                    <div class="workExp__year">ноябрь 2014 – апрель 2015</div>
                     <div class="workExp__spec">adobe photoshop / 3ds Max</div>
                     <div class="workExp__org">freelance</div>
-                    <div class="workExp__descr">Осуществление небольших заказов по обработке, цветокоррекции и ретуши фотографии. Разработка дизайна и визуализация экстерьеров и интерьеров помещений, конструирование и визуализация проектов торговых точек.</div>
+                    <div class="workExp__descr">Выполенение работ по обработке, цветокоррекции и ретуши фотографии. Разработка дизайна и визуализация экстерьеров и интерьеров помещений, конструирование и визуализация проектов торговых точек.</div>
                 </li>   
                 <li class="workExp__item">
-                    <div class="workExp__year">ноябрь 2013 - ноябрь 2016</div>
+                    <div class="workExp__year">ноябрь 2013 - ноябрь 2015</div>
                     <div class="workExp__spec">юрисконсульт</div>
-                    <div class="workExp__org">предприятия России</div>
+                    <div class="workExp__org">предприятиях России</div>
                     <div class="workExp__descr">Круг обязанностей:  договорная работа;  подготовка, составление, юридический анализ, переговоры при заключении, изменении, прекращении различных договоров, контроль за исполнением; текущее правовое обслуживание деятельности предприятия. Осуществление частной практики в сфере градостроительства и автострахования.</div>
                 </li>   
                 <li class="workExp__item">
                     <div class="workExp__year">февраль 2011 - ноябрь 2013</div>
                     <div class="workExp__spec">юрисконсульт</div>
-                    <div class="workExp__org">предприятия Украины</div>
+                    <div class="workExp__org">предприятиях Украины</div>
                     <div class="workExp__descr">Круг обязанностей:  договорная работа;  подготовка, составление, юридический анализ, переговоры при заключении, изменении, прекращении различных договоров, контроль за исполнением; текущее правовое обслуживание деятельности предприятия; претензионно-исковая деятельность; представительство и защита интересов предприятия в суде, правоохранительных органах, органах государственной власти.</div>
                 </li>        
             </ul>
@@ -317,7 +323,7 @@
 
 <div class="scroll_progress"></div>
 </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>

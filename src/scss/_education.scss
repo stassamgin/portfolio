@@ -32,8 +32,8 @@
         position: absolute;
         top: -1rem;
         left: - $educMarkerMargin + 3rem;
-        background: linear-gradient(0, transparent, $blue 8rem);
-        z-index: 10;
+        background: linear-gradient(0, rgba(0,0,0,0), $blue 8rem);
+        z-index: 0;
     }
 }
 
@@ -76,7 +76,7 @@
         top: 0;
         left: - $educMarkerMargin + 3rem - .4rem - .2rem - .6rem/2;
         background-color: $orange;
-        z-index: 11;
+        z-index: 20;
     }
 }
 

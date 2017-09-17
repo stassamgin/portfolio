@@ -1,7 +1,7 @@
 .footer {
     background-color: $lightGrey;
     height: 60px;
-    display: flex;
+    @extend %flexbox;
     flex: 0 0 auto;
     justify-content: center;
     align-items: center;

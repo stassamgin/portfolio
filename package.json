@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "devDependencies": {
     "browser-sync": "latest",
-    "gulp": "latest",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
-    "gulp-file-include": "^1.1.0",
+    "gulp-file-include": "latest",
+    "gulp-group-css-media-queries": "latest",
     "gulp-minify-css": "latest",
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
-    "gulp-rigger": "^0.5.8",
+    "gulp-rigger": "latest",
     "gulp-rimraf": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
@@ -17,8 +18,10 @@
     "gulp-watch": "latest"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp" 
   },
   "author": "stassamgin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "optionalDependencies": {}
 }

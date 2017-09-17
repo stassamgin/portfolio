@@ -1,13 +1,13 @@
 .hero {    
     height: 600px;
     width: 100%;
-    // flex: 1 0 auto;
-    display: flex;
+    @extend %flexbox;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
     padding-top: $headerHeight;
+     flex-shrink: 0;
 }
 
 .hero__diag {
@@ -63,8 +63,8 @@
 }
 
 .hero__opener {
+    @extend %flexbox;
     z-index: 15;    
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;    
 }
@@ -97,7 +97,7 @@
 }
 
 .hero__btn {
-    display: flex;
+    @extend %flexbox;
     flex-direction: row;
     justify-content: space-around;
     padding: 0 3%;
@@ -105,15 +105,32 @@
 
 .btn {
     display: inline-block;
-    padding: .7em 3.2em;
-    font-family: $fontFamily1;
-    font-size: $fontSize;
-    font-weight: bold;
-    background-color: $bgColor;
-    color: $blue;
+    overflow: hidden;
     border-radius: .2em;
     box-shadow: $textShadow;
-    transition: all .5s;
+    position: relative;
+
+    &:hover {
+        top: -2px;
+        left: 0;
+        transform: scale(1.05);
+        box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+    }
+
+    a {
+        display: block;        
+        padding: .7em 3.2em;
+        font-family: $fontFamily1;
+        font-size: $fontSize;
+        font-weight: bold;
+        background-color: $bgColor;
+        color: $blue;
+
+        &:hover {
+            color: $blue;
+            background-color: $bgColor;
+        }
+    }
 }
 
 
@@ -147,10 +164,6 @@
        justify-content: space-between;
     }
     
-}
-
-@media only screen and (min-width : $screen-sm) {
-
 }
 
 @media only screen and (min-width : $screen-md) {
@@ -240,4 +253,14 @@
         margin-top: 60px;
         width: 520px;
     }
+}
+
+@media only screen and (min-width : 1500px) {
+
+ .hero {    
+        height: 1100px;
+        padding-top: 3.5rem;      
+    }
+
+
 }

@@ -13,12 +13,13 @@
 
 .about__aboutBlock {
     @extend %blockStartFlexRow;
+    flex-shrink: 1;
     width: 100%;
 }
 
 .about__info {
-padding: 0 40px 0 5px;
-width: 100%;
+    padding: 0 40px 0 5px;
+    width: 100%;
 }
 
 .about__title {
@@ -40,7 +41,7 @@ width: 100%;
 }
 
 .about__contact {
-min-width: 290px;
+    min-width: 260px;
 }
 
 .photo {
@@ -62,7 +63,7 @@ min-width: 290px;
 }
 
 .about__contactList {
-    display: flex;
+    @extend %flexbox;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
@@ -100,7 +101,7 @@ min-width: 290px;
     
     .about__contactItemPadding {
             padding: 4.375rem;
-            font-weight: 400;
+            font-weight: 400;   
             color: $textGrey;
         }
 
@@ -123,7 +124,7 @@ min-width: 290px;
 
     .about__contactList {
         margin-top: 30px;
-        height: 190px;
+        height: 200px;
     }
 }
 
@@ -144,7 +145,11 @@ min-width: 290px;
     }
 
     .about__contact {
-         display: flex;
+        display: -webkit-box;
+        display: -moz-box ;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-around;

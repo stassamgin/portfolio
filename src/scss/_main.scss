@@ -18,20 +18,12 @@ body  {
     height: 100%;
     width: 100%;
     position: relative;
-    display: flex;
+    @extend %flexbox;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: hidden;
+    flex-shrink: 0;
 }
-
-// .bodyWrapper--active {
-//     height: 100vh;
-
-//     @media only screen and (min-width : $screen-md) {
-//         overflow: auto;        
-//     }
-
-// }
 
 .container {
     width: 100%;
@@ -41,10 +33,6 @@ body  {
    
     @media only screen and (min-width : $screen-xs) {
         padding: 0 2rem;
-    }
-
-    @media only screen and (min-width : $screen-sm) {
-
     }
 
     @media only screen and (min-width : $screen-md) {
@@ -80,20 +68,8 @@ position: relative;
         white-space: nowrap;
     }
 
-    @media only screen and (min-width : $screen-sm) {
-
-    }
-
     @media only screen and (min-width : $screen-md) {
         display: block;
-    }
-
-    @media only screen and (min-width : $screen-lg) {
-        
-    }
-
-    @media only screen and (min-width : $screen-xl) {
-        
     }
 }
 
@@ -110,32 +86,32 @@ position: relative;
 
 // ======== SUPPORT CLASSES =======
 
+%flexbox {
+    display: -webkit-box;
+    display: -moz-box ;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
 %blockStartFlexRow {
+    display: -webkit-box;
+    display: -moz-box ;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    // overflow: hidden;
-
-    @media only screen and (min-width : $screen-sm) {
-
-    }
+    flex-shrink: 0;
+    position: relative;
 
     @media only screen and (min-width : $screen-md) {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
     }
-
-    @media only screen and (min-width : $screen-lg) {
-        
-    }
-
-    @media only screen and (min-width : $screen-xl) {
-    
-    }
-        
 }
 
 %bgBlockColor {

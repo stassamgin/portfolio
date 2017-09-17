@@ -2,11 +2,13 @@
 
     
 var gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
 	plumber = require('gulp-plumber'),
 	notify = require('gulp-notify'),
     uglify = require('gulp-uglify'),
     fileinclude = require('gulp-file-include'),
-	sass = require('gulp-sass'),
+    sass = require('gulp-sass'),
+    gcmq = require('gulp-group-css-media-queries'),
 	minifyCss = require('gulp-minify-css'),	
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
@@ -51,7 +53,7 @@ gulp.task('getStyle', function(){
     }))
     .pipe(sass())
     .pipe(autoprefixer())
-    // .pipe(minifyCss())  
+    .pipe(minifyCss())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
 });
@@ -62,7 +64,7 @@ gulp.task('getJs', function(){
     .pipe(plumber({
         errorHandler: notify.onError()
     }))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });
