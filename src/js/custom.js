@@ -18,7 +18,7 @@ xml.onreadystatechange = function() {
     }
 
     if( country == 'UA' ) {
-        document.getElementById('js-adres').innerHTML = "<span >Адрес: </span>ул. Вышгородская, г.Киев"
+        document.getElementById('js-adres').innerHTML = "<span >Адрес: </span>ул. Вышгородская, г. Киев"
         document.getElementById('js-res-pdf').setAttribute('href', 'file/SAMGIN_STANISLAV_FRONTEND.pdf');
         document.getElementById('js-res-docx').setAttribute('href', 'file/SAMGIN_STANISLAV_FRONTEND.docx');
     }
@@ -129,6 +129,7 @@ eventItems.forEach(function(item) {
         
     })
  })
+
 
 // EFFECTS & ANIMATION https://greensock.com
 

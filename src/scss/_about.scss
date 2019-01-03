@@ -6,20 +6,25 @@
     z-index: 25;
 }
 
-.asideTitle__rotate--about {
-    top: -3rem;
-    left: -5rem;
-}
-
 .about__aboutBlock {
-    @extend %blockStartFlexRow;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     flex-shrink: 1;
     width: 100%;
+
+    @media only screen and (min-width : $screen-md) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .about__info {
-    padding: 0 40px 0 5px;
-    width: 100%;
+padding: 0 40px 0 5px;
+width: 100%;
 }
 
 .about__title {
@@ -41,7 +46,7 @@
 }
 
 .about__contact {
-    min-width: 260px;
+min-width: 260px;
 }
 
 .photo {
@@ -101,7 +106,7 @@
     
     .about__contactItemPadding {
             padding: 4.375rem;
-            font-weight: 400;   
+            font-weight: 400;
             color: $textGrey;
         }
 

@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
     rimraf = require('rimraf'),
+    imagemin = require('imagemin'),
+    imageminJpegtran = require('imagemin-jpegtran'),
 	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload;
 
