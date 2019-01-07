@@ -14,11 +14,11 @@
 @mixin skillBar($skillValue, $childNumber) {
     &:nth-child(#{$childNumber}) {
         &::before {
-            width: #{$skillValue+%};
+            width: #{$skillValue + '%'};
         }
         &::after {
             content: '#{$skillValue} %';
-            right: calc(#{$skillValue+%} - 5rem); 
+            right: calc(#{$skillValue + '%'} - 5rem);
         }
     }
 }

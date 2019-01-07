@@ -1,0 +1,168 @@
+.education  {
+    @extend %blockStartFlexRow;
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+.asideTitle__rotate--education {
+    top: 0;
+    left: 0;
+}
+
+.education__block  {
+    width: 100%;
+    
+}
+
+.education__title  {
+    @extend .skillBlockMain__title;
+}
+
+.education__list  {
+    width: calc(100% - 5rem);
+    margin-left: auto;
+    position: relative;
+    padding-top: 3rem;
+
+    &::before {
+        content: '';
+        width: 2px;
+        height: calc(100% + 3rem);
+        position: absolute;
+        top: -1rem;
+        left: - $educMarkerMargin + 3rem;
+        background: linear-gradient(0, rgba(0,0,0,0), $blue 8rem);
+        z-index: 0;
+    }
+}
+
+.education__icon {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: -1rem;
+    left: - $educMarkerMargin + 3rem - 2rem;
+    z-index: 15;
+    background: $bgColor;
+    border: 2px solid $blue;
+    border-radius: 50%;
+
+    svg {
+        width: 70%;
+        height: 70%;
+        margin: .6rem 0 0 .6rem;
+
+        * {
+            fill: $textBlack;
+        }
+    }
+
+}
+
+.education__item  {
+    width: 100%;
+    position: relative;
+    margin-bottom: 6rem;
+    font-family: $fontFamily1;
+
+    &::before {
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        border: .6rem solid $bgColor;
+        position: absolute;
+        top: 0;
+        left: - $educMarkerMargin + 3rem - .4rem - .2rem - .6rem/2;
+        background-color: $orange;
+        z-index: 20;
+    }
+}
+
+.education__school {
+    font-size: $fontSize--h2;
+    font-weight: bold;
+    color: $textBlack;    
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.education__spec {
+    display: inline-block;
+    font-size: $fontSize--small;
+    font-weight: normal;
+    color: $textGrey;
+    text-transform: uppercase;
+    margin-left: 4rem;
+}
+
+.education__acadDegree {
+    display: inline-block;
+    font-size: $fontSize--small;
+    font-weight: normal;
+    color: $textGrey;
+    padding: 0 2rem;
+    text-transform: uppercase;    
+    margin-bottom: 2.5rem; 
+
+    &::before, &::after {
+        padding: 0 1em;
+        content: '/';
+    }
+}
+
+.education__year {
+    display: inline-block;
+    font-family: $fontFamily1;
+    font-size: $fontSize--small + 0.1;
+    color: $textGrey;   
+}
+
+.education__descr {
+    font-family: $fontFamily1;
+    font-size: $fontSize;
+    font-weight: normal;
+    color: $textBlack;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+@media only screen and (min-width : $screen-sm) {
+    .education__list  {
+    width: calc(100% - 10rem);
+    padding-top: 6rem;
+
+        &::before {
+            left: - $educMarkerMargin;
+            height: calc(100% + 4rem);
+            top: -2rem;
+        }
+    }
+
+    .education__icon {
+        width: 6rem;
+        height: 6rem;
+        top: -2rem;
+        left: - $educMarkerMargin - 3rem;
+
+        svg {        
+            margin: .9rem 0 0 .9rem;
+        }
+    }
+
+    .education__item::before  {
+        left: - $educMarkerMargin - .4rem - .2rem - .6rem/2;
+    }
+}
+
+@media only screen and (min-width : $screen-md) {
+    .education__descr {
+        padding-right: 2rem;
+    }
+}
+
+@media only screen and (min-width : $screen-lg) {
+    .education__descr {
+        padding-right: 0;
+    }
+}

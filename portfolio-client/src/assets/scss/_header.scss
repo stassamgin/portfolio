@@ -1,0 +1,115 @@
+
+.header {
+    width: 100%;
+    z-index: 100;
+    height: 0;
+}
+
+.header__nav {
+    display: block;
+    width: 100%;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    right: - 100%;
+    background: $blueGradient;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    padding-top: 4rem;
+}
+
+.header__nav--active {
+    right: 0;
+    box-shadow: -2px 0 2px rgba(0,0,0,.3);
+}
+
+.header__navList {
+    list-style: none;
+    width: 100%;
+    @extend %flexbox;
+    flex-direction: column;
+    justify-content: flex-start;   
+}
+
+.header__navItem {
+    margin: 0;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(90deg, rgba(0,0,0,0), $bgColor 10%, $bgColor 40%, rgba(0,0,0,0));
+        opacity: .7;
+    }
+
+    a {
+        display: block;
+        font-size: $fontSize+0.1;
+        text-shadow: $textShadow;
+        text-decoration: none;
+        color: $bgColor;
+        padding: 2rem 2.5rem;
+    }
+}
+
+.menuBtn {
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    display: block;
+    padding: .5rem 1.5rem .6rem;
+    background-color: $bgColor;
+    color: $blue;
+    border: 1.5px solid $blue;
+    border-radius: 15px;
+    z-index: 101;
+     font-family: $fontFamily1;
+    font-size: $fontSize--small;
+    text-transform: uppercase;
+
+    &:focus, &:hover {
+        outline: none;
+    }
+}
+
+@media only screen and (min-width : $screen-sm) {
+    .header__navItem {  
+        a {      
+            padding-left: 5rem;
+        }
+    }
+}
+
+@media only screen and (min-width : $screen-md) {
+    .header__nav {
+        width: 18rem;
+        right: - 18rem;
+        transition: all .7s;
+    }
+
+    .header__nav--active {
+    right: 0;
+    }
+
+    .header__navItem {  
+        a {      
+            padding: 1.5rem 2rem;
+
+            &:hover {
+                color: $textBlack;
+                text-shadow: 1px 1px 1px rgba(255,255,255, .7); 
+            }
+        }
+    }
+
+    .menuBtn {
+        top: .75rem;
+        right: .75rem;
+    }
+}

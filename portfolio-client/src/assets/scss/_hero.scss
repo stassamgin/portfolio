@@ -1,0 +1,267 @@
+.hero {    
+    height: 600px;
+    width: 100%;
+    @extend %flexbox;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    padding-top: $headerHeight;
+     flex-shrink: 0;
+}
+
+.hero__diag {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    background-image: $blueGradient;
+    // overflow: hidden;
+    z-index: 10;
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(510deg, transparent 55%, $bgColor 55%);
+    }
+}
+
+.hero__img {
+    z-index: 20;
+    position: absolute;
+    right: 0;
+    bottom: 30vh;
+    display: none;
+
+    img {
+        width: 100%;
+    }
+
+    @media only screen and (min-width : $screen-lg) {
+        right: 80px;
+        top:60px;
+        display: block;
+        width: 450px;
+    }
+
+    @media only screen and (min-width : $screen-xl) {
+        right: 85px;
+        top:70px;
+        width: 520px;
+    }
+
+    @media only screen and (min-width : 1360px) {
+        right: 80px;
+        top:20px;
+        width: 600px;
+    }
+}
+
+.hero__opener {
+    @extend %flexbox;
+    z-index: 15;    
+    flex-direction: column;
+    justify-content: flex-start;    
+}
+
+.hero__title {
+    font-family: $fontFamily1;
+    font-size: $fontSize--h1;
+    text-shadow: $textShadow;
+    color: $bgColor;
+}
+
+.hero__discr {    
+    font-family: $fontFamily1;
+    font-size: $fontSize + 0.1;
+    color: $bgColor;
+    text-shadow: $textShadow;
+}
+
+.hero__resume {
+    width: 100%;
+}
+
+.hero__discrResume {
+    display: block;
+    width: 100%;
+    padding: 2rem 0 1.2rem;
+    font-family: $fontFamily1;
+    font-size: $fontSize--small;
+    color: $bgColor;
+}
+
+.hero__btn {
+    @extend %flexbox;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 3%;
+}
+
+.btn {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: .2em;
+    box-shadow: $textShadow;
+    position: relative;
+
+    &:hover {
+        top: -2px;
+        left: 0;
+        transform: scale(1.05);
+        box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+    }
+
+    a {
+        display: block;        
+        padding: .7em 3.2em;
+        font-family: $fontFamily1;
+        font-size: $fontSize;
+        font-weight: bold;
+        background-color: $bgColor;
+        color: $blue;
+
+        &:hover {
+            color: $blue;
+            background-color: $bgColor;
+        }
+    }
+}
+
+
+@media only screen and (min-width : $screen-xs) {
+    .hero {    
+        height: 115vh;
+        padding-top: 3.5rem;      
+    }
+
+    .hero__opener {
+        height: 80vh;
+        justify-content: space-around;
+    }
+
+    .hero__diag::before{
+        background-image: linear-gradient(532.5deg, transparent 85%, $bgColor 85%);
+    }
+
+    .hero__title {
+        width: 100%;    
+    }
+
+    .hero__discr {
+        width: 100%;
+        line-height: 1.5;   
+    }
+
+    .hero__btn {        
+        padding: 0;
+       width: 100%;
+       justify-content: space-between;
+    }
+    
+}
+
+@media only screen and (min-width : $screen-md) {
+    .hero {    
+        height: 750px;
+        padding-top: 3.5rem;      
+    }
+
+    .hero__opener {
+        align-items: center;    
+    }
+
+    .hero__title {
+        width: 500px;
+    }
+    
+    .hero__discr {
+        width: 500px;
+    }
+    
+    .hero__resume {
+        width: 500px;
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width : $screen-lg) {
+
+    .hero {    
+        height: 750px;
+        padding-top: 3.5rem;      
+    }
+
+    .hero__diag::before{
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(510deg, transparent 50%, $bgColor 50%);
+    }
+
+    .hero__opener {
+        height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;   
+    }    
+    
+    .hero__title {
+        margin-top: 30px;
+        width: 400px;
+    }
+    
+    .hero__discr {
+        margin-top: 10px;
+        height: 100%;
+        width: 400px;
+    }
+    
+    .hero__resume {
+        width: 400px;
+    }
+
+    .hero__discrResume {
+        margin-top: 10px;
+    }
+
+    .hero__btn {        
+        justify-content: space-around;
+        padding: 0 3%;;
+    }
+}
+
+@media only screen and (min-width : $screen-xl) {
+    .hero {    
+        height: 900px;
+        padding-top: 3.5rem;      
+    }    
+
+    .hero__title {
+        margin-top: 60px;
+        width: 520px;
+    }
+    
+    .hero__discr {        
+        height: 100%;
+        width: 520px;
+    }
+    
+    .hero__resume {
+        margin-top: 60px;
+        width: 520px;
+    }
+}
+
+@media only screen and (min-width : 1500px) {
+
+ .hero {    
+        height: 1100px;
+        padding-top: 3.5rem;      
+    }
+
+
+}

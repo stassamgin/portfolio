@@ -1,0 +1,11 @@
+.footer {
+    background-color: $lightGrey;
+    height: 60px;
+    @extend %flexbox;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamily1;
+    font-size: $fontSize--small;
+    color: $textBlack;
+}
