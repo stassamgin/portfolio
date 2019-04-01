@@ -5,7 +5,7 @@
       <li :key="href"
           class="header__navItem">
         <a :href="href"
-            @click.prevent="menuClickHAndler(href)">
+            @click.prevent="menuClickHandler(href)">
           {{ title }}
         </a>
       </li>
@@ -39,7 +39,7 @@
       }
     },
     methods: {
-      menuClickHAndler(href) {
+      menuClickHandler(href) {
         window.scrollTo(0, getElementHeight(document.querySelector('.' + href)));
 
         document.querySelector('.header__nav').classList.remove('header__nav--active');

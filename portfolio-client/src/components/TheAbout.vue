@@ -6,16 +6,21 @@
       </h2>
       <div class="about__aboutBlock">
         <div class="about__info">
-          <div class="about__title">{{ text.name }}</div>
-          <div class="about__subtitle">{{ text.profession }}</div>
-          <div class="about__descr">{{ text.description }}</div>
+          <div class="about__title">{{ text.personalData.firstName }} {{ text.personalData.lastName }}</div>
+          <div class="about__subtitle">{{ text.personalData.specialty }}</div>
+          <div class="about__descr">{{ text.personalData.description }}</div>
         </div>
         <div class="about__contact">
           <div class="photo">
             <img src="@/assets/image/headshot-min.jpg" alt="headshot">
           </div>
           <ul class="about__contactList">
-            <template v-for="item in text.personalData">
+            <li v-else-if="item.link" class="about__contactItem">
+              <span>Дата рождения: </span>
+              <span>{{ text.personalData.birth }}</span>
+            </li>
+
+            <template v-for="item in text.contactData">
               <li v-if="item.specialAttr"
                   v-bind="dynamicAttr(item.specialAttr)"
                   class="about__contactItem">

@@ -4,14 +4,11 @@
                :is="componentNameGenerator(block)"
                :text="componentContentByBlockName(block)"/>
 
-
-    <!-- ==== footer BEGIN ==== -->
     <div class="section_wrapper">
       <footer class = "footer">
         &copy; С.А. Самгин, 2017
       </footer>
     </div>
-    <!-- ==== footer END ==== -->
 
     <div class="scroll_progress"></div>
   </div>
@@ -56,15 +53,15 @@ export default {
         about: {
           blockId: 'about',
           title: 'Обо мне',
-          name: 'Станислав Самгин',
-          profession: 'Веб-разработчик, верстальщик',
-          description: 'Веб разработка началась для меня как любопытство и выросло в дело всей жизни. Я действительно люблю то, чем я занимаюсь и стараюсь быть на гребне переменчивой волны фронтэнда. По опыту первой профессии имею солидный стаж работы с предприятиями и учреждениями, поэтому отлично понимаю, как особенности работы с ними, так и их бизнес потребности, а также что такое сжатые сроки и ограниченный бюджет. Большое внимание уделяю самообразованию и профессиональному росту.',
-          photo: 'headshot-min.jpg',
-          personalData: [
-            {
-              name: 'Год рождения',
-              value: '31.07.1985',
-            },
+          personalData: {
+            firstName: 'Станислав',
+            lastName: 'Cамгин',
+            patronymicName: 'Алексеевич',
+            specialty: 'Front-end разработчик, верстальщик',
+            photo: 'headshot-min.jpg',
+            birth: '31.07.1985'
+          },
+          contactData: [
             {
               name: 'Viber',
               value: '+38 095 3176971',
@@ -87,12 +84,12 @@ export default {
             },
             {
               name: 'Адрес',
-              value: 'ул. М.Василенко,<br>г. Симферополь',
+              value: 'ул. М.Василенко, г. Симферополь',
               specialAttr: {
                 name: 'id',
                 value: 'js-adres',
               },
-            },
+            }
           ]
         },
         skills: {
@@ -104,31 +101,135 @@ export default {
               {
                 name: 'HTML',
                 percent: '95',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'HTML5',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'семантичная верстка',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
               },
               {
                 name: 'CSS',
                 percent: '95',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'SASS',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'LESS',
+                    percent: '50',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
               },
               {
                 name: 'JavaScript',
                 percent: '80',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'ES6',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'OOP',
+                    percent: '70',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
+              },
+              {
+                name: 'Vue',
+                percent: '80',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'Vuex',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'Nuxt',
+                    percent: '70',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
+              },
+              {
+                name: 'React',
+                percent: '80',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'Redux',
+                    percent: '90',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'OOP',
+                    percent: '70',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
               },
               {
                 name: 'JQuery',
                 percent: '85',
+                show: true,
+                showInMobile: true
               },
               {
-                name: 'Adobe Photoshop',
-                percent: '60',
-              },
-              {
-                name: 'Adobe Illustrator',
-                percent: '40',
-              },
-              {
-                name: '3DS Max',
-                percent: '40',
-              },
+                name: 'Графические редакторы',
+                percent: '80',
+                show: true,
+                showInMobile: true,
+                skills: [
+                  {
+                    name: 'Adobe Photoshop',
+                    percent: '60',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: 'Adobe Photoshop',
+                    percent: '60',
+                    show: true,
+                    showInMobile: true
+                  },
+                  {
+                    name: '3DS Max',
+                    percent: '40',
+                    show: true,
+                    showInMobile: true
+                  }
+                ]
+              }
             ]
           },
           tools: {
@@ -173,20 +274,65 @@ export default {
         works: {
           blockId: 'works',
           title: 'Мои работы',
-
+          data: [
+            {
+              name: 'work1',
+              thumb: '',
+              image: '',
+              sourceLink: '',
+              workLink: '',
+              createdAt: '2010',
+              description: ''
+            },
+          ]
         },
         education: {
           blockId: 'education',
           title: 'Образование',
+          data: [
+            {
+              name: 'Одесский национальный университет имени И. И. Мечникова',
+              specialty: 'правоведение',
+              degree: 'специалист',
+              startAt: '2010',
+              endAt: '2014',
+              description: 'В 2010 году, получил диплом по специальности правоведение. Благодаря полученным знаниям окончательно сформирована картина работы бизнеса и государства, а также механизм их взаимодействия, принципы взаимодействия субъектов. Приобретены ценные навыки работы с заказчиком, умение аргументированно убеждать и отстаивать свою позицию, умение понимать потребности клиента чуть больше, чем понимает он сам.'
+            },
+            {
+              name: 'Донбасский Государственный технический Университет',
+              specialty: 'финансы',
+              degree: 'специалист',
+              startAt: '2007',
+              endAt: '2009',
+              description: 'В 2009 году, на базе первого высшего образования мной был получен диплом по специальности «Финансы». Сформированы навыки бюджетирования проектов, умение оценить потребности бизнеса и конъектуру рынка, навыки работы с финансами и отчетностью, понимание финансовой системы и ее потребностей.'
+            },
+            {
+              name: 'Донбасский Государственный технический Университет',
+              specialty: 'инженер-механик',
+              degree: 'специалист',
+              startAt: '2003',
+              endAt: '2008',
+              description: 'В 2008 году мной была получена специальность инженер-механик. Считаю, что основным плюсом приобретения данного образования было формирование технического образа мышления, умения использовать, читать и создавать механизмы, детали, схемы, чертежи. Также данная специальность создала замечательную математическую и логическую базу. В процессе обучения заложен интерес и базовые навыки работы с AutoCAD, а в последствии с трехмерной графикой 3d studio max.'
+            }
+          ]
 
         },
         experience: {
           blockId: 'workExp',
           title: 'Опыт работы',
-
+          data: [
+            {
+              organization: {
+                name: '',
+                site: '',
+              },
+              specialty: 'правоведение',
+              startAt: '2010',
+              endAt: '2014',
+              description: 'В 2010 году, получил диплом по специальности правоведение. Благодаря полученным знаниям окончательно сформирована картина работы бизнеса и государства, а также механизм их взаимодействия, принципы взаимодействия субъектов. Приобретены ценные навыки работы с заказчиком, умение аргументированно убеждать и отстаивать свою позицию, умение понимать потребности клиента чуть больше, чем понимает он сам.'
+            },
+          ]
         },
-
-
       }
     }
   },
